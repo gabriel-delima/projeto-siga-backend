@@ -20,6 +20,7 @@ class Alunos(db.Model):
     sexo = db.Column(db.String(10), nullable = False)
     período = db.Column(db.String(6), nullable = False)
     curso = db.Column(db.String(30), nullable = False)
+    
     # alunos(many) <-> turma(many)
     turmas = db.relationship('Turmas', secondary=association_table , backref='turma')
 

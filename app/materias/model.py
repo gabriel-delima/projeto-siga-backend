@@ -11,5 +11,5 @@ class Materias(db.Model):
     turma = db.relationship('Turmas', backref = 'owner')
 
     # Resultados(Many) <-> Materia(one)    obs.: O aluno pode fazer a mesma matéria várias vezes
-    resultado = db.relationship('Resultados', backref = 'owner')
+    resultado = db.relationship('Resultados', backref = 'resultado')
 

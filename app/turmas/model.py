@@ -34,7 +34,7 @@ class Turmas(db.Model):
     sala_de_aula = db.Column(db.String(10), nullable = False)
 
     # Horário(Many) <-> Turma(One)
-    horario = db.relationship('Horario', backref = 'owner')
+    horario = db.relationship('Horario', backref = 'horario')
 
     # materia(one) <-> turma(many)
     materia_id = db.Column(db.Integer, db.ForeignKey('materias.id'))

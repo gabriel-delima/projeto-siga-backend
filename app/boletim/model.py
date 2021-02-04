@@ -46,7 +46,7 @@ class Boletins(db.Model):
     id = db.Column(db.Integer, primary_key = True)
 
     # Boletim(one) <-> Períodos(many)
-    periodo = db.relationship('Periodos', backref = 'owner')
+    periodo = db.relationship('Periodos', backref = 'periodo')
 
     # Boletim(one) <-> Aluno(one)
     aluno_id = db.Column(db.Integer, db.ForeignKey('alunos.id'))

@@ -16,4 +16,4 @@ class Professores(db.Model):
     formacao = db.Column(db.String(30), nullable = False)
 
     # professor(one) <-> turma(many)
-    turma = db.relationship('Turmas', backref = 'owner')
+    turma = db.relationship('Turmas', backref = 'turma')
